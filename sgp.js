@@ -1,4 +1,5 @@
 // SISTEMA DE GERENCIAMENTO DE PERSONAGEM
+// SISTEMA DE GERENCIAMENTO DE PERSONAGEM
 
 function calcularPontuacaoTotal(historicoDePontos) {
     const somarRodada = function (acumulador, pontosDaFase) { 
@@ -20,15 +21,28 @@ function filtrarMissoesConcluidas(listaDeMiossoes) {
     return apenasConcluidas;
 };
 
-function atualiarInventarioioAtual, acao ,nomeDoitem){
+function atualiarInventarioioAtual acao ,nomeDoitem) {
     if (acao == "pegar")
         const inventarioComItemNovo = [IventarioAtual, nomeDoItem];
-    novoIventario = inventarioComItemNovo;
-    else if (acao =="descartar")
+    novoInventario = inventarioComItemNovo;
+    else if (acao =="descartar") {
+        const inventarioSemUltimoItem = inventarioAtual.slice();
+        novoInventario = inventarioSemUltimoItem;
+    } else {
+        novoIventario = inventarioAtual;
+    }
+    return novoInventario; //Retornar a mochila do jogador atualizada
 
-}
+
+};
    let novoIventario;
 }
 const pontosDoJogador = [100, 50, 200, 10]
-console.log(pontosDoJogador);
+const total = calcularPontuacaoTotal(pontosDoJogador);
+console.log("Pontuacao final" ,total);
+
+const missoes = [
+    {nome: "Salvar a aldeia", status: "concluída"},
+    {nome:  "Encontrar o mapa, status "em andamento"},
+]
 
